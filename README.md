@@ -37,12 +37,6 @@
 ## 3. Feature Engineering
 
 ### a. Dew point temperature
-* We know that the dew point temperature is related to temperature and can be approximated as follows:
-    Td = T - ((100 - RH)/5)
-    Where,
-    Td - Dew point temperature (in degrees Celsius)
-    T - Observed temperature (in degrees Celsius)
-    RH - Relative humidity (in percent)
 * The correlation between temperature and dew point temperature is 0.912798
 * Hence, we can drop the column from the dataset since it will not increase the accuracy of predictions, and will only increase the model complexity.
 
