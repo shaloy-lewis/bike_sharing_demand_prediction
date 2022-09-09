@@ -7,7 +7,7 @@
 
 
 | Sl. No. | Section         |  
-|---------|--------------------------|
+|:--------|:-------------------------|
 |    1    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#1-introduction">   Introduction  </a>    | 
 |    2    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#2-eda-summary">   EDA Summary    </a>   | 
 |    3    | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#3-modelling-summary"> Modelling Summary  </a> | 
@@ -90,7 +90,7 @@
 ## 4. Results
 
 | Sl. No. |     Regression Model     |     Train RMSE     |     Test RMSE      | Train R2 Score (%) | Test R2 Score (%) |
-|---------|--------------------------|--------------------|--------------------|--------------------|-------------------|
+|:--------|:-------------------------|:-------------------|:-------------------|:-------------------|:------------------|
 |    1    |      Decision Tree       | 263.27 | 294.39 | 83.30  | 79.29 |
 |    2    |      Random Forests      | 255.13 | 279.28 | 84.32  |  81.36 |
 |    3    | Gradient Boosting Method | 171.52 | 204.50 | 92.91  | 90.00 |
