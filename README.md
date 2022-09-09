@@ -5,6 +5,9 @@
 <img src="images/bike_sharing.gif" alt="..." height="175px">
 </p>
 
+![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## Index
 
 | Sl. No. | Section         |  
 |:--------|:-------------------------|
