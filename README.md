@@ -8,11 +8,11 @@
 
 | Sl. No. | Section         |  
 |:--------|:-------------------------|
-|    1    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#1-introduction">   Introduction  </a>    | 
-|    2    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#2-eda-summary">   EDA Summary    </a>   | 
-|    3    | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#3-modelling-summary"> Modelling Summary  </a> | 
-|    4    | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#4-results">        Results     </a>     |
-| 5 | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#5-conclusions"> Conclusions  </a> |
+|    1    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction#1-introduction">   Introduction  </a>    | 
+|    2    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction#2-eda-summary">   EDA Summary    </a>   | 
+|    3    | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction#3-modelling-summary"> Modelling Summary  </a> | 
+|    4    | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction#4-results">        Results     </a>     |
+| 5 | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction#5-conclusions"> Conclusions  </a> |
 
 ![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
