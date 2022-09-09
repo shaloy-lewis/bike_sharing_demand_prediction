@@ -5,50 +5,24 @@
 <img src="images/bike_sharing.gif" alt="..." height="175px">
 </p>
 
+
+| Sl. No. | Section         |  
+|---------|--------------------------|
+|    1    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#1-introduction">   Introduction  </a>    | 
+|    2    |   <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#2-eda-summary">   EDA Summary    </a>   | 
+|    3    | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#3-modelling-summary"> Modelling Summary  </a> | 
+|    4    | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#4-results">        Results     </a>     |
+| 5 | <a href="https://github.com/shaloy-lewis/bike_sharing_demand_prediction/edit/main/README.md#5-conclusions"> Conclusions  </a> |
+
 ![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 1. Abstract
+## 1. Introduction
 * Currently Rental bikes are introduced in many urban cities for the enhancement of mobility comfort. It is important to make the rental bike available and accessible to the public at the right time as it lessens the waiting time. Eventually, providing the city with a stable supply of rental bikes becomes a major concern. The crucial part is the prediction of bike count required at each hour for the stable supply of rental bikes.
 * The goal of this project is to build a ML model that is able to predict the demand of rental bikes in the city of Seoul. We are provided with the data of weather conditions, office holidays, and the number of bikes rented each hour for 12 months.
 
 ![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 2. Introduction
-* The dataset contains weather information (Temperature, Humidity, Windspeed, Visibility, Dewpoint, Solar radiation, Snowfall, Rainfall), the number of bikes rented per hour and date information.
-
-### Attribute Information:
-* Date - year-month-day
-* Rented Bike count - Count of bikes rented at each hour
-* Hour - Hour of the day
-* Temperature - Celsius
-* Humidity - %
-* Windspeed - m/s
-* Visibility - 10m
-* Dew point temperature - Celsius
-* Solar radiation - MJ/m2
-* Rainfall - mm
-* Snowfall - cm
-* Seasons - Winter, Spring, Summer, Autumn
-* Holiday - Holiday/No holiday
-* Functional Day - NoFunc(Non Functional Hours), Fun(Functional hours)
-
-![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-## 3. Feature Engineering
-
-### a. Dew point temperature
-* The correlation between temperature and dew point temperature is 0.912798
-* Hence, we can drop the column from the dataset since it will not increase the accuracy of predictions, and will only increase the model complexity.
-
-### b. New columns from the 'date' column:
-Added 3 new columns as follows:
-* Month – Month of the year
-* Day_of_week – 0-6 – Monday-Sunday
-* Weekend – Whether a given day is a weekend (1) or not (0)
-
-![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-## 4. EDA Summary
+## 2. EDA Summary
 
 * The dependent variable is positively skewed.
 * Normally distributed attributes: temperature, humidity.
@@ -71,7 +45,7 @@ Added 3 new columns as follows:
 
 ![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 5. Modelling Summary
+## 3. Modelling Summary
 * Choice of split: K-fold cross validation, where K = 6
   This choice of split was chosen because we had the computational power available to use this split, and thereby reducing overfitting
 * Evaluation metrics: RMSE – Root Mean Square Error
@@ -79,47 +53,55 @@ Added 3 new columns as follows:
 * Hyperparameter tuning: GridsearchCV
   Grid Search combines a selection of hyperparameters established by the scientist and runs through all of them to evaluate the model’s performance. Through this     method, we can establish the set of parameters such that they do not overfit the data.
 
-### a. Decision tree
+### 3.1. Decision tree
 * This can be considered as the baseline model to obtain predictions. Decision trees are easy to explain, and tend to have low bias and high variance (Overfitting).
 * Best hyperparameters: max_depth = 20, min_samples_leaf = 30
-* Decision Tree train RMSE: 224.90
-* Decision Tree test RMSE: 240.64
+* Decision Tree train RMSE: 263.27 
+* Decision Tree test RMSE:  294.39
+* Decision Tree train R2 score: 83.30 %
+* Decision Tree test R2 score: 79.29 %
 
-### b. Random forests
+### 3.2. Random forests
 * Random Forest is an ensemble technique which use multiple decision trees and a technique called Bootstrap and Aggregation, commonly known as bagging. The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees.
 * Best hyperparameters: min_samples_leaf = 25, n_estimators = 500
-* Random Forests train RMSE: 210.61
-* Random Forests test RMSE: 238.19
+* Random Forests train RMSE: 171.52
+* Random Forests test RMSE: 204.50
+* Random Forests train R2 score: 84.32 %
+* Random Forests test R2 score: 81.36 %
 
-### c. Gradient Boosting Method (GBM)
+### 3.3. Gradient Boosting Method (GBM)
 * In gradient boosting, each predictor corrects its predecessor’s error. Each predictor is trained using the residual errors of predecessor as labels.
 * Best hyperparameters: min_samples_leaf = 26, n_estimators = 500
 * GBM train RMSE: 160.93
 * GBM test RMSE: 189.36
+* GBM train R2 score: 92.91 % 
+* GBM test R2 score: 90.00 %
 
-### d. Extreme Gradient Boosting (XG Boost)
+### 3.4. Extreme Gradient Boosting (XG Boost)
 * In XG Boost, decision trees are created in sequential form. Weights are assigned to all the independent variables which are then fed into the decision tree which predicts results. The weight of variables predicted wrong by the tree is increased and the variables are then fed to the second decision tree. These individual classifiers/predictors then ensemble to give a strong and more precise model.
 * Best hyperparameters: min_samples_leaf = 25, n_estimators = 500
-* XG Boost train RMSE: 157.58
-* XG Boost test RMSE: 188.85
+* XG Boost train RMSE: 167.93
+* XG Boost test RMSE: 199.72
+* XG Boost train R2 score: 93.20 %
+* XG Boost test R2 score: 90.46 %
 
 ![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 6. Challenges faced
-* Comprehending the problem statement
-* Feature engineering – deciding on the features to be dropped/kept/transformed
-* Choosing the best visualization to show the trends clearly in the EDA phase
-* Deciding on ways to handle outliers
-* Deciding on the ML model to make predictions
-* Deciding on the best evaluation metric to evaluate the models
-* Coming up with the best hyperparameters, so that the models do not overfit
+## 4. Results
+
+| Sl. No. |     Regression Model     |     Train RMSE     |     Test RMSE      | Train R2 Score (%) | Test R2 Score (%) |
+|---------|--------------------------|--------------------|--------------------|--------------------|-------------------|
+|    1    |      Decision Tree       | 263.27 | 294.39 | 83.30  | 79.29 |
+|    2    |      Random Forests      | 255.13 | 279.28 | 84.32  |  81.36 |
+|    3    | Gradient Boosting Method | 171.52 | 204.50 | 92.91  | 90.00 |
+|    4    |         XG Boost         | 167.93 | 199.72 | 93.20  |  90.46 |
 
 ![--](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 7. Conclusions
-It was found that the XG Boost model had the lowest test RMSE.
+## 5. Conclusions
+It was found that the XG Boost model had the lowest test RMSE and the highest R2 score.
 
 The final choice of model for deployment depends on:
-* If it is absolutely necessary to have a model with the best accuracy, then XG boost will be the best choice, since it has the lowest RMSE than other models built.
+* If it is absolutely necessary to have a model with the best accuracy, then XG boost will be the best choice, since it has the lowest RMSE and highest R2 score than other models built.
 * But we know that, higher the model complexity, lower is the model interpretability. Hence if the predictions must be explained to stakeholders, then XG Boost is not an ideal choice.
 * In this case decision tree can be used, since they are easier to explain. By choosing a simpler model, we will be compromising with the model accuracy (Accuracy vs Interpretability trade-off).
